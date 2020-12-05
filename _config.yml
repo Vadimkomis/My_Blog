@@ -6,7 +6,7 @@ logo:
 # Author image is used in site sidebar and greetings in the home page hero text
 author:
   image: 'vadim.JPG'
-  greetings: "I work as the mobile Engineering Manager at Freshly.
+  greetings: "I work as the mobile Engineering Manager at Freshly."
 favicon: 'assets/images/favicon.png'
 baseurl:
 production_url: https://talman.io
