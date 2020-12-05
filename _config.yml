@@ -1,11 +1,11 @@
 # Site setings
-name: 'Aarne Talman'
-description: 'ML, NLP & Public Cloud'
-meta_description: 'Aarne Talman - CTO at Nordcloud UK'
+name: 'Vadim Komisarchik'
+description: 'My Thoughts'
+meta_description: 'Vadim Komisarchiik - Engineering Manager at Freshly'
 logo:
 # Author image is used in site sidebar and greetings in the home page hero text
 author:
-  image: 'aarne.jpeg'
+  image: 'vadim.JPG'
   greetings: "I work as the CTO at Nordcloud UK. I'm also a researcher in Language Technology at University of Helsinki."
 favicon: 'assets/images/favicon.png'
 baseurl:
@@ -16,13 +16,13 @@ mailchimp_url:
 ga_analytics: 
 
 # Contact form setings
-email: aarne@talman.io
+email: vadim@myclok.com
 contact_page_description: "Get in touch by using the form below."
 thankyou_page_description: "Your message has been successfully sent. I will contact you very soon!"
 
 # Social links
-twitter: 'aarnetalman'
-github: 'aarnetalman'
+twitter: 'vkomissarchik'
+github: 'Vadimkomis'
 linkedin: 'talman'
 
 # Navigation
@@ -35,8 +35,6 @@ navigation:
     url: /publications
   - text: Software and Data
     url: /software
-  - text: Teaching
-    url: /teaching
   - text: Contact Me
     url: /contact
   - text: Search
