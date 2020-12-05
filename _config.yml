@@ -6,7 +6,7 @@ logo:
 # Author image is used in site sidebar and greetings in the home page hero text
 author:
   image: 'vadim.JPG'
-  greetings: "I work as the CTO at Nordcloud UK. I'm also a researcher in Language Technology at University of Helsinki."
+  greetings: "I work as the mobile Engineering Manager at Freshly.
 favicon: 'assets/images/favicon.png'
 baseurl:
 production_url: https://talman.io
@@ -23,7 +23,7 @@ thankyou_page_description: "Your message has been successfully sent. I will cont
 # Social links
 twitter: 'vkomissarchik'
 github: 'Vadimkomis'
-linkedin: 'talman'
+linkedin: 'vadimkomisarchik'
 
 # Navigation
 navigation:
