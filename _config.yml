@@ -1,0 +1,64 @@
+# Site setings
+name: 'Aarne Talman'
+description: 'ML, NLP & Public Cloud'
+meta_description: 'Aarne Talman - CTO at Nordcloud UK'
+logo:
+# Author image is used in site sidebar and greetings in the home page hero text
+author:
+  image: 'aarne.jpeg'
+  greetings: "I work as the CTO at Nordcloud UK. I'm also a researcher in Language Technology at University of Helsinki."
+favicon: 'assets/images/favicon.png'
+baseurl:
+production_url: https://talman.io
+disqus:
+mailchimp_url: 
+# Add your GA Tracking Id
+ga_analytics: 
+
+# Contact form setings
+email: aarne@talman.io
+contact_page_description: "Get in touch by using the form below."
+thankyou_page_description: "Your message has been successfully sent. I will contact you very soon!"
+
+# Social links
+twitter: 'aarnetalman'
+github: 'aarnetalman'
+linkedin: 'talman'
+
+# Navigation
+navigation:
+  - text: Home
+    url: /
+  - text: About
+    url: /about
+  - text: Publications and Talks
+    url: /publications
+  - text: Software and Data
+    url: /software
+  - text: Teaching
+    url: /teaching
+  - text: Contact Me
+    url: /contact
+  - text: Search
+    url: /search
+
+# Required Plugins
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Permalinks
+permalink: /:title
+
+# Other
+markdown: kramdown
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
