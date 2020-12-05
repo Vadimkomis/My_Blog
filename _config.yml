@@ -5,7 +5,7 @@ meta_description: 'Vadim Komisarchiik - Engineering Manager at Freshly'
 logo:
 # Author image is used in site sidebar and greetings in the home page hero text
 author:
-  image: 'vadim.JPG'
+  image: 'vadim.jpeg'
   greetings: "I work as the mobile Engineering Manager at Freshly."
 favicon: 'assets/images/favicon.png'
 baseurl:
@@ -31,9 +31,9 @@ navigation:
     url: /
   - text: About
     url: /about
-  - text: Publications and Talks
-    url: /publications
-  - text: Software and Data
+  - text: Talks
+    url: /talks
+  - text: Software
     url: /software
   - text: Contact Me
     url: /contact
