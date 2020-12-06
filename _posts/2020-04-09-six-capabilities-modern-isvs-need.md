@@ -80,16 +80,3 @@ The last common capability for successful SaaS vendors based on our experience i
 
 We recently worked with a SaaS provider who wanted to create a new mobile service from scratch. Using AWS Lambda, we were able to develop the first prototype overnight, which would potentially have taken them weeks to develop in their old on-premise environment.
 
-## Building a roadmap for the six capabilities
-Public cloud is a natural choice for SaaS providers as it offers unmatched range of components and functionality to build the six key capabilities SaaS vendors need to compete in the highly contested market.
-
-Nordcloud has helped many SaaS vendors to migrate to public cloud and to build the six capabilities increasing their potential to grow faster than their competitors.
-
-Based on our experiences we have developed a capability maturity model that helps our customers to map their current state and future aspirations. 
-
-![SaaS Capability Model](assets/images/posts/2020/capability_model.png)
-
-Let me know if you’d like to hear more about how your organisation can benefit from public cloud and our experience in helping SaaS vendors to succeed.
-
-[1] Gartner, Forecast: Public Cloud Services, Worldwide, 2016-2020
-
