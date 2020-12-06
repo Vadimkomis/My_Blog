@@ -1,82 +1,55 @@
 ---
 layout: post
-title: 'Six capabilities modern ISVs need in order to future-proof their SaaS offering'
-tags: [SaaS, ISV, Cloud Strategy]
+title: 'Stoic Development Part 1'
+tags: [stoic development, blog]
 featured_image_thumbnail:
 featured_image: 
 featured: false
 hidden: false
 ---
 
-Successful software vendors (ISVs) are leveraging public cloud capabilities and becoming SaaS providers. The move to public cloud-based SaaS offering provides ISVs a potential for business growth that cannot be matched with traditional on-premise single-tenant solution. In fact, Gartner estimates that the market size of the SaaS marketplace this year will be $99.7B while growing at the rate of 21% [1].
+![](/images/posts/stoic_development_zeno.jpg)
 
-*(This blog post was originally published on [Nordcloud company Blog](https://www2.nordcloud.com/isvsblog))*
+What is Stoic Development? Stoic Development is the convergence of the philosophy of Stoicism and software development. I've written this post as I think it will make you a better developer if you practice it.
 
-<!--more-->
+Before we get into what Stoic Development is, it's important to understand Stoicism.
 
-## ISVs can benefit from moving to SaaS in several different ways 
-It helps them to:
-1. Unlock new customer segments through lower customer acquisition cost and easier geographical expansion
-2. Reduce the total cost of ownership (TCO) through elimination of customer-specific support costs
-3. Reduced time-to-market through leveraging built-in components available in all the public cloud platforms
-4. Leverage data and insights through a unified data platform 
+Stoicism is a philosophy that was founded by Zeno and originated in Greece.
+The main pillars of Stoicism include:
+  - Seek the deep understanding of things.
+  - Have self-control, resist distractions.
+  - Be comfortable being poor.
+  - Practice negative visualization.
 
-Moving from a traditional license-based business model to a subscription model also lowers customers’ barrier to buy while improving financial predictability for the ISV. In contrast to the traditional licensing model, subscription models allow customers to use the software without committing to long licensing periods – lowering their barrier to buy. It also smoothens the revenue curve through monthly recurring revenue, resulting in improved financial predictability.
+For more info about Stoicism [read](https://dailystoic.com/what-is-stoicism-a-definition-3-stoic-exercises-to-get-you-started/).
 
-## Successful SaaS providers have built their business around 6 core capabilities
-Having worked with many SaaS providers on their cloud migration journey, we have identified a set of capabilities that separates the successful companies from the rest. These capabilities are:
+**1.**
+**Seek the deep understanding of things.** Don't just agree with what you read, be a consumer that critiques and also understands the pros and cons.
+For example, when you learn a new principle in programming, always make sure to understand the positive and negative tradeoffs. There's no such thing as a free lunch. Everytime you choose a library, framework, methodology, or architecture consider the negative side effect or potential tech debt.
+For example, about a year ago we started using dependency injection in our test suites. Now, dependency injection is a great technique. That said it does have its drawbacks. Injecting a dependency can give you a false positive if you don't fully understand how to properly mock the dependency for the given test.
 
-![Six Capabilities](assets/images/posts/2020/six_capabilities.png)
+**2.**
+**Have self-control, resist distractions.** Marcus Aurelius once said: "_Concentrate every minute like a Roman - like a man - on doing what's in front of you with precise and genuine seriousness, tenderly, willingly, with justice. And on freeing yourself from all other distractions. Yes, you can - if you do everything as if it were the last thing you were doing in your life, and stop being aimless, stop letting your emotions override what your mind tells you, stop being hypocritical, self-centered , irritable. You see how few things you have to do to live a satisfying and reverent life? If you can manage this, that's all even the gods can ask of you._"
+As developers we all know there are so many potential distractions: slack notifications that do not stop beeping, your product manager who asks a question about something that he needs help with, your phone buzzing with notifications, or coworkers asking questions. These are just a few examples, of some of the things that interrupt us with on a daily basis. In the midst of this chaos we're expected to do our job. So how can we "_Concentrate every minute like a Roman_" ? Try practicing the following techniques:
+  - Put your phone away. Only check it once an hour or less.
+  - Invest in noise cancelling headphones.
+  - Encourage your team not to have music or noise where programmers are working.
+  - Commit to the hours you're going to work with no interruption ahead of your day. I try to accomplish at least 4 – 5 hours of uninterrupted work a day. Some of you might say that's not enough, but these are the hours that I consider deep work, with no interruptions.
+  - Make sure to have some sort of physical activity in the middle of the day. I think this may be one of the best hacks I ever found. Anytime, I have a hard day, or I'm stuck on a problem, this always does the trick for me.
 
-The key for building these six capabilities effectively is to use the capabilities provided by public cloud platforms like AWS, Azure and GCP. I’ll go through each one of these capabilities in some detail below.
+**3.**
+**Be comfortable being poor.** Nowadays, almost every developer uses some sort of third party library/component. Don't get me wrong, I think that there are many advantages to this, but it has a price. My general belief, is that the more third party components you use, the more reliant you become on "_magic_". My suggestion is to practice once a week, a day without the use of any third party libraries. I know this sounds radical and could result in more lines of code, but it will also enable you to understand things on a deeper level (see the first point). It will remove your fear. For example, what happens if that library stops being supported? With a third party library this can happen any day of the week.
 
-## Multi-tenancy
-Successful SaaS vendors provide standardised service to all customers through multi-tenancy. This means that they provide a single shared application and data layer to all customers, without customer specific instances.
+**4. Practice negative visualization.**
+Seneca once said "_He robs present ills of their power who has perceived their coming beforehand ._" Which means, it's good to be a bit paranoid (just a bit). We, as software developers, are guaranteed one thing, and one thing only. At some point something will break. If we know that, we can prepare. Here are some examples that I follow to mitigate risk:
+  - Write good tests (Unit and BDD). I can't tell you how many times this practice has highlighted a bug when I thought I was done with a specific feature.
+  -  Be proactive about bug fixing. Don't wait for somebody to report it. If you see a bug, open a ticket. Fix it yourself. I can't tell you how awesome it is when somebody comes to me and says I found this bug, here's a pr that fixes it.
+  -  When manually testing your feature before final PR submission write out test cases for both you and the reviewer. For example, I recently wrote a notifications feature. In addition to testing the feature itself, I also tested that it had not regressed in relationship to other features in the same controller.
+  -  Your feature is not in a vacuum. When you develop something, always think what effect it will have on other features.
+  -  Introduce randomness to your process. When NASA writes tests it also includes randomness. Why shouldn't you? For example, say you are developing a mobile login screen. Try adding a test that will trigger random x and y coordinates on the screen to see if any issues occur.
+  -  Introduce different networking conditions to your app and see how it responds.
+  -  Introduce memory leaks. See if it causes any crashes.
+  -  Crash your app on purpose. See what the experience is like for the user post crash.
 
-![Multi-tenancy](assets/images/posts/2020/multitenancy.png)
-
-In contrast, the traditional single tenancy model results in high costs due to maintenance overhead of keeping application instances in sync across the installation base. Your different instances will also easily drift apart from each other in terms code and configuration. 
-
-Some organisations opt for limited multi-tenancy where all the customers share a common application layer, but the data layer is kept in separate customer-specific instances. This can be a useful model for organisations whose customers are following strict data compliancy regulations and must keep their data in a specific geographical region, for instance.
-
-The full multi-tenancy model provides the most value by allowing teams to focus on developing and maintaining a single version leading to lower TCO and easier maintainability. In full multi-tenancy customer specific variations can be built into the software as components that can be turned on or off based on the need.
-
-## Automation
-Successful SaaS vendors minimise any manual steps and build end-to-end automation across development, testing, deployment and operations. Automation capabilities and DevOps toolchain can drastically improve delivery quality and speed-to-market. 
-
-For instance, on the infrastructure side companies should use Infrastructure-as-Code (IaC) tools like AWS CloudFormation or Terraform to increase automation and consistency of environments, to templatise and automate infrastructure stack creation. 
-
-Companies should utilise the full DevOps toolchain that automates the workflow from coding to deployment. Automating the whole workflow is very important as any gaps in the automation will effectively become a bottleneck and kill the benefits that you were hoping to achieve. To achieve the end-to-end workflow automation, it is recommended to set up a dedicated team responsible for the DevOps toolchain and way of working.
-
-We recommend our customers is to use a managed DevOps tool service rather than building their own toolchain. For instance, Azure DevOps is a great SaaS service provided by Microsoft that is also compatible with other public cloud platforms like AWS.
-
-As your development teams will have more responsibility in the SaaS model, it is important to perform automated security and compliance tests. Start with automated reporting and compliance checks inserted into CI/CD pipeline complemented with cloud environment best-practices / anti-pattern checks.
-
-## Microservices and Serverless
-Microservice architecture and serverless let companies focus on functionality rather than integration. We tell our customers that whenever they start developing something new to their SaaS solution, they should always think if it can be implemented using serverless services like AWS Lambda, Azure Functions or GCP Cloud Functions. If serverless is not an option, they should build new functionality as microservices.
-
-Serverless services allow you to build your functionality as event-driven components that are executed on-demand triggered by specific events, like database change, log activity etc. Serverless functions speed up development and deployment time and can significantly reduce cost as you only pay for the requests, not for the idle time.
-
-Microservices architecture has been around for a while, but it is interesting that so many ISVs are still stuck in the world of traditional monoliths. Microservices are built to separate functionality as independent components, where the functionality is offered through APIs, and that can be developed and maintained without having to worry about dependency issues (given you don’t alter the APIs).
-
-![Microservices](assets/images/posts/2020/microservices.png)
-
-## Data as a Platform
-Shared platform allows SaaS vendors to leverage insights from data aggregated across applications. In fact, a shared data layer is fast becoming the number one capability many ISVs and SaaS providers are after and which sets apart the successful providers from the rest. There are still many organisations that are not able to leverage data across their customer instances in an effective way. 
-
-![Data as s Platform](assets/images/posts/2020/data_platform.png)
-
-Public cloud offer unparalleled capabilities to build a consolidated data asset from your service. Even if you’re keeping your customer databases in separate locations, you can still benefit from having a shared data lake for insights and analytics. However, you might have to do anonymization in case of strict data policies. 
-
-Shared data layer for applications is important not only for sharing data and getting platform wide analytics but also for compliance and auditability. Using cloud platform services (e.g. AWS Lakeformation) it is possible to build shared data layer with detailed access controls and audit trail. 
-
-## Single Codebase
-Having a single codebase can sound like an obvious thing but maintaining a strict single codebase policy requires dedication. SaaS vendors with multiple different versions of the code end up spending more on change implementation, deployment and maintenance. Instead of building customer specific functionality to different codebases or versions, you should have a single codebase and build customer specific functionality into common build through config options. This is in line with what I already wrote about multitenancy.
-
-![Single Codebase](assets/images/posts/2020/single_codebase.png)
-
-## Velocity of Innovation
-The last common capability for successful SaaS vendors based on our experience is enabling velocity of innovation through public cloud. Having the possibility to shoot up a development environment in minutes or building your prototype as a serverless functions utilising cloud-native pre-built components can have a massive impact on the way you introduce new value adding services to your customers. 
-
-We recently worked with a SaaS provider who wanted to create a new mobile service from scratch. Using AWS Lambda, we were able to develop the first prototype overnight, which would potentially have taken them weeks to develop in their old on-premise environment.
-
+Stoic Development may help you become a better software developer and write better code. It may take some adjusting, but from my experience the quality of your product will be higher. If you prefer quality over quantity, then this should be your mantra.
+Now you might ask, where are all the code examples? For that you will have to stay tuned for part two.
